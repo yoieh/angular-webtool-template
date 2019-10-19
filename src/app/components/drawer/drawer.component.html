@@ -1,59 +1,53 @@
-<div class="example-container">
-    <!-- <mat-toolbar class="example-toolbar">
-        
-    </mat-toolbar> -->
+<mat-sidenav-container class="sidenav-container">
+    <mat-sidenav #sidenav mode="side" opened="true">
+        <mat-nav-list class="dashboard">
 
-    <mat-sidenav-container class="example-sidenav-container">
-        <mat-sidenav #sidenav class="example-sidenav" mode="side" opened="true">
-            <mat-nav-list class="dashboard">
-
-                <a mat-list-item (click)="toggle()">
-                    <mat-icon mat-list-icon>menu</mat-icon>
-                    <!-- <p matLine [@openClose]="isOpen ? 'open' : 'closed'">
+            <a mat-list-item (click)="toggle()">
+                <mat-icon mat-list-icon>menu</mat-icon>
+                <!-- <p matLine [@openClose]="isOpen ? 'open' : 'closed'">
                         <mat-icon mat-list-icon>menu</mat-icon>
                     </p> -->
-                </a>
+            </a>
 
-                <mat-divider></mat-divider>
+            <mat-divider></mat-divider>
 
-                <a mat-list-item (click)="toggleActive($event)">
-                    <mat-icon mat-list-icon>account_circle</mat-icon>
-                    <p matLine [@openClose]="isOpen ? 'open' : 'closed'">Name</p>
-                </a>
+            <a mat-list-item (click)="toggleActive($event)">
+                <mat-icon mat-list-icon>account_circle</mat-icon>
+                <p matLine [@openClose]="isOpen ? 'open' : 'closed'">Dashboard</p>
+            </a>
 
-                <mat-divider></mat-divider>
+            <mat-divider></mat-divider>
 
-                <a mat-list-item (click)="toggleActive($event)">
-                    <mat-icon mat-list-icon>inbox</mat-icon>
-                    <p matLine [@openClose]="isOpen ? 'open' : 'closed'">Inbox</p>
-                </a>
-                <a mat-list-item (click)="toggleActive($event)">
-                    <mat-icon mat-list-icon>star</mat-icon>
-                    <p matLine [@openClose]="isOpen ? 'open' : 'closed'">Starred</p>
-                </a>
-                <a mat-list-item (click)="toggleActive($event)">
-                    <mat-icon mat-list-icon>drafts</mat-icon>
-                    <p matLine [@openClose]="isOpen ? 'open' : 'closed'">Drafts</p>
-                </a>
+            <a mat-list-item (click)="toggleActive($event)">
+                <mat-icon mat-list-icon>inbox</mat-icon>
+                <p matLine [@openClose]="isOpen ? 'open' : 'closed'">Inbox</p>
+            </a>
+            <a mat-list-item (click)="toggleActive($event)">
+                <mat-icon mat-list-icon>star</mat-icon>
+                <p matLine [@openClose]="isOpen ? 'open' : 'closed'">Starred</p>
+            </a>
+            <a mat-list-item (click)="toggleActive($event)">
+                <mat-icon mat-list-icon>drafts</mat-icon>
+                <p matLine [@openClose]="isOpen ? 'open' : 'closed'">Drafts</p>
+            </a>
 
-                <mat-divider></mat-divider>
+            <mat-divider></mat-divider>
 
-                <a mat-list-item (click)="toggleActive($event)">
-                    <mat-icon mat-list-icon>mail</mat-icon>
-                    <p matLine [@openClose]="isOpen ? 'open' : 'closed'">All Mail</p>
-                </a>
-                <a mat-list-item (click)="toggleActive($event)">
-                    <mat-icon mat-list-icon>delete</mat-icon>
-                    <p matLine [@openClose]="isOpen ? 'open' : 'closed'">Trash</p>
-                </a>
-                <a mat-list-item (click)="toggleActive($event)">
-                    <mat-icon mat-list-icon>warning</mat-icon>
-                    <p matLine [@openClose]="isOpen ? 'open' : 'closed'">Spam</p>
-                </a>
-            </mat-nav-list>
-        </mat-sidenav>
-        <div (click)="toggle(false)" class="example-sidenav-content">
-            <ng-content></ng-content>
-        </div>
-    </mat-sidenav-container>
-</div>
+            <a mat-list-item (click)="toggleActive($event)">
+                <mat-icon mat-list-icon>mail</mat-icon>
+                <p matLine [@openClose]="isOpen ? 'open' : 'closed'">All Mail</p>
+            </a>
+            <a mat-list-item (click)="toggleActive($event)">
+                <mat-icon mat-list-icon>delete</mat-icon>
+                <p matLine [@openClose]="isOpen ? 'open' : 'closed'">Trash</p>
+            </a>
+            <a mat-list-item (click)="toggleActive($event)">
+                <mat-icon mat-list-icon>warning</mat-icon>
+                <p matLine [@openClose]="isOpen ? 'open' : 'closed'">Spam</p>
+            </a>
+        </mat-nav-list>
+    </mat-sidenav>
+    <div (click)="toggle(false)" class="sidenav-content">
+        <ng-content></ng-content>
+    </div>
+</mat-sidenav-container>

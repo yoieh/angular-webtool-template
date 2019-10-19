@@ -5,7 +5,6 @@ import { DrawerComponent } from './drawer.component';
 
 import { MatSidenavModule } from '@angular/material/sidenav'
 import { MatIconModule } from '@angular/material/icon';
-import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatDividerModule } from '@angular/material/divider';
 import { MatListModule } from '@angular/material/list';
 
@@ -17,7 +16,6 @@ import { MatListModule } from '@angular/material/list';
     CommonModule,
     MatSidenavModule,
     MatIconModule,
-    MatToolbarModule,
     MatDividerModule,
     MatListModule
   ],
