@@ -6,11 +6,13 @@ import { DashboardModule } from './dashboard/dashboard.module';
 import { AdminLayoutComponent } from 'src/app/components/admin-layout/admin-layout.component';
 import { HeaderBarModule } from 'src/app/components/header-bar/header-bar.module';
 import { DrawerModule } from 'src/app/components/drawer/drawer.module';
+import { ErrandsComponent } from './errands/errands.component';
 
 
 @NgModule({
   declarations: [
-    AdminLayoutComponent
+    AdminLayoutComponent,
+    ErrandsComponent
   ],
   imports: [
     CommonModule,

@@ -18,9 +18,9 @@
 
             <mat-divider></mat-divider>
 
-            <a mat-list-item (click)="toggleActive($event)" routerLink="/">
-                <mat-icon mat-list-icon>inbox</mat-icon>
-                <p matLine [@openClose]="isOpen ? 'open' : 'closed'">Inbox</p>
+            <a mat-list-item (click)="toggleActive($event)" routerLink="/errands">
+                <mat-icon mat-list-icon>assignment</mat-icon>
+                <p matLine [@openClose]="isOpen ? 'open' : 'closed'">Ärende</p>
             </a>
             <a mat-list-item (click)="toggleActive($event)">
                 <mat-icon mat-list-icon>star</mat-icon>
