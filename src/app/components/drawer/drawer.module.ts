@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { RouterModule } from '@angular/router';
 
 import { DrawerComponent } from './drawer.component';
 
@@ -14,6 +15,7 @@ import { MatListModule } from '@angular/material/list';
   ],
   imports: [
     CommonModule,
+    RouterModule,
     MatSidenavModule,
     MatIconModule,
     MatDividerModule,

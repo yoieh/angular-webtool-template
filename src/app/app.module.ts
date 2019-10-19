@@ -8,24 +8,22 @@ import { NotfoundComponent } from './page/notfound/notfound.component';
 
 import { DrawerModule } from './components/drawer/drawer.module';
 import { HeaderBarModule } from './components/header-bar/header-bar.module';
-import { AdminLayoutComponent } from './components/admin-layout/admin-layout.component';
 import { LoginComponent } from './page/login/login.component';
-import { DashboardModule } from './page/dashboard/dashboard.module';
+import { AdminModule } from './page/admin/admin.module';
 
 @NgModule({
   declarations: [
     AppComponent,
     NotfoundComponent,
-    AdminLayoutComponent,
-    LoginComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
+    AdminModule,
     DrawerModule,
-    HeaderBarModule,
-    DashboardModule
+    HeaderBarModule
   ],
   providers: [],
   bootstrap: [AppComponent]

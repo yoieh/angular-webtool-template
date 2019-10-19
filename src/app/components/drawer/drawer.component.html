@@ -11,14 +11,14 @@
 
             <mat-divider></mat-divider>
 
-            <a mat-list-item (click)="toggleActive($event)">
+            <a mat-list-item (click)="toggleActive($event)" routerLink="/dashboard">
                 <mat-icon mat-list-icon>account_circle</mat-icon>
                 <p matLine [@openClose]="isOpen ? 'open' : 'closed'">Dashboard</p>
             </a>
 
             <mat-divider></mat-divider>
 
-            <a mat-list-item (click)="toggleActive($event)">
+            <a mat-list-item (click)="toggleActive($event)" routerLink="/">
                 <mat-icon mat-list-icon>inbox</mat-icon>
                 <p matLine [@openClose]="isOpen ? 'open' : 'closed'">Inbox</p>
             </a>

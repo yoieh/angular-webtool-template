@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 import {
   trigger,
@@ -33,14 +34,25 @@ import {
 export class DrawerComponent implements OnInit {
 
   isOpen = false;
+  element: HTMLElement;
 
-  constructor() { }
+  constructor(private router: Router) { }
 
   ngOnInit() {
   }
 
-  toggle(val) {
+  toggle(val: boolean | undefined) {
     typeof val !== "undefined" ? this.isOpen = val : this.isOpen = !this.isOpen;
+  }
+
+  toggleActive(event: any, url: string) {
+    event.preventDefault();
+    if (this.element !== undefined) {
+      this.element.style.backgroundColor = "white";
+    }
+    var target = event.currentTarget;
+    target.style.backgroundColor = "#e51282";
+    this.element = target;
   }
 
 }
