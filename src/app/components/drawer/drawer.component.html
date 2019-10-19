@@ -1,23 +1,59 @@
-<mat-drawer-container class="example-container" [hasBackdrop]="true">
-    <mat-drawer #drawer [mode]="push">I'm a drawer</mat-drawer>
-    <mat-drawer-content>
-        <p>test</p>
-        <!-- <mat-form-field>
-            <mat-label>Sidenav mode</mat-label>
-            <mat-select #mode value="side">
-                <mat-option value="side">Side</mat-option>
-                <mat-option value="over">Over</mat-option>
-                <mat-option value="push">Push</mat-option>
-            </mat-select>
-        </mat-form-field>
-        <mat-form-field>
-            <mat-label>Has backdrop</mat-label>
-            <mat-select #hasBackdrop>
-                <mat-option>Unset</mat-option>
-                <mat-option [value]="true">True</mat-option>
-                <mat-option [value]="false">False</mat-option>
-            </mat-select>
-        </mat-form-field> -->
-        <button mat-raised-button (click)="drawer.toggle()">Toggle drawer</button>
-    </mat-drawer-content>
-</mat-drawer-container>
+<div class="example-container">
+    <!-- <mat-toolbar class="example-toolbar">
+        
+    </mat-toolbar> -->
+
+    <mat-sidenav-container class="example-sidenav-container">
+        <mat-sidenav #sidenav class="example-sidenav" mode="side" opened="true">
+            <mat-nav-list class="dashboard">
+
+                <a mat-list-item (click)="toggle()">
+                    <mat-icon mat-list-icon>menu</mat-icon>
+                    <!-- <p matLine [@openClose]="isOpen ? 'open' : 'closed'">
+                        <mat-icon mat-list-icon>menu</mat-icon>
+                    </p> -->
+                </a>
+
+                <mat-divider></mat-divider>
+
+                <a mat-list-item (click)="toggleActive($event)">
+                    <mat-icon mat-list-icon>account_circle</mat-icon>
+                    <p matLine [@openClose]="isOpen ? 'open' : 'closed'">Name</p>
+                </a>
+
+                <mat-divider></mat-divider>
+
+                <a mat-list-item (click)="toggleActive($event)">
+                    <mat-icon mat-list-icon>inbox</mat-icon>
+                    <p matLine [@openClose]="isOpen ? 'open' : 'closed'">Inbox</p>
+                </a>
+                <a mat-list-item (click)="toggleActive($event)">
+                    <mat-icon mat-list-icon>star</mat-icon>
+                    <p matLine [@openClose]="isOpen ? 'open' : 'closed'">Starred</p>
+                </a>
+                <a mat-list-item (click)="toggleActive($event)">
+                    <mat-icon mat-list-icon>drafts</mat-icon>
+                    <p matLine [@openClose]="isOpen ? 'open' : 'closed'">Drafts</p>
+                </a>
+
+                <mat-divider></mat-divider>
+
+                <a mat-list-item (click)="toggleActive($event)">
+                    <mat-icon mat-list-icon>mail</mat-icon>
+                    <p matLine [@openClose]="isOpen ? 'open' : 'closed'">All Mail</p>
+                </a>
+                <a mat-list-item (click)="toggleActive($event)">
+                    <mat-icon mat-list-icon>delete</mat-icon>
+                    <p matLine [@openClose]="isOpen ? 'open' : 'closed'">Trash</p>
+                </a>
+                <a mat-list-item (click)="toggleActive($event)">
+                    <mat-icon mat-list-icon>warning</mat-icon>
+                    <p matLine [@openClose]="isOpen ? 'open' : 'closed'">Spam</p>
+                </a>
+            </mat-nav-list>
+        </mat-sidenav>
+        <div (click)="toggle(false)" class="example-sidenav-content">
+            <ng-content></ng-content>
+        </div>
+    </mat-sidenav-container>
+</div>

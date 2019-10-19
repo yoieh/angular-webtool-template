@@ -3,7 +3,11 @@ import { CommonModule } from '@angular/common';
 
 import { DrawerComponent } from './drawer.component';
 
-import { MatDrawer, MatDrawerContainer, MatDrawerContent, MatSidenavModule } from '@angular/material/sidenav'
+import { MatSidenavModule } from '@angular/material/sidenav'
+import { MatIconModule } from '@angular/material/icon';
+import { MatToolbarModule } from '@angular/material/toolbar';
+import { MatDividerModule } from '@angular/material/divider';
+import { MatListModule } from '@angular/material/list';
 
 @NgModule({
   declarations: [
@@ -11,7 +15,11 @@ import { MatDrawer, MatDrawerContainer, MatDrawerContent, MatSidenavModule } fro
   ],
   imports: [
     CommonModule,
-    MatSidenavModule
+    MatSidenavModule,
+    MatIconModule,
+    MatToolbarModule,
+    MatDividerModule,
+    MatListModule
   ],
   exports: [DrawerComponent]
 })
