@@ -1,15 +1,15 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
-import { LoginModule } from './login/login.module';
 import { AdminModule } from './admin/admin.module';
 import { NotfoundModule } from './notfound/notfound.module';
+import { PublicModule } from './public/public.module';
 
 @NgModule({
   declarations: [],
   imports: [
     CommonModule,
-    LoginModule,
+    PublicModule,
     AdminModule,
     NotfoundModule
   ]
