@@ -1,49 +1,65 @@
 <mat-sidenav-container class="sidenav-container">
     <mat-sidenav #sidenav mode="side" opened="true">
-        <mat-nav-list class="dashboard">
+        <mat-nav-list>
 
             <a mat-list-item (click)="toggle()">
                 <mat-icon mat-list-icon>menu</mat-icon>
-                <!-- <p matLine [@openClose]="isOpen ? 'open' : 'closed'">
-                        <mat-icon mat-list-icon>menu</mat-icon>
-                    </p> -->
+                <div [@openClose]="isOpen ? 'open' : 'closed'">
+                    <p class="mat-list-text" matLine>
+                        <mat-icon mat-list-icon>arrow</mat-icon>
+                    </p>
+                </div>
             </a>
 
             <mat-divider></mat-divider>
 
             <a mat-list-item (click)="toggleActive($event)" routerLink="/dashboard">
                 <mat-icon mat-list-icon>account_circle</mat-icon>
-                <p matLine [@openClose]="isOpen ? 'open' : 'closed'">Dashboard</p>
+                <div [@openClose]="isOpen ? 'open' : 'closed'">
+                    <p class="mat-list-text" matLine>Dashboard</p>
+                </div>
             </a>
 
             <mat-divider></mat-divider>
 
             <a mat-list-item (click)="toggleActive($event)" routerLink="/errands">
                 <mat-icon mat-list-icon>assignment</mat-icon>
-                <p matLine [@openClose]="isOpen ? 'open' : 'closed'">Ärende</p>
+                <div [@openClose]="isOpen ? 'open' : 'closed'">
+                    <p class="mat-list-text" matLine>Ärende</p>
+                </div>
             </a>
             <a mat-list-item (click)="toggleActive($event)">
                 <mat-icon mat-list-icon>star</mat-icon>
-                <p matLine [@openClose]="isOpen ? 'open' : 'closed'">Starred</p>
+                <div [@openClose]="isOpen ? 'open' : 'closed'">
+                    <p class="mat-list-text" matLine>Starred</p>
+                </div>
             </a>
             <a mat-list-item (click)="toggleActive($event)">
                 <mat-icon mat-list-icon>drafts</mat-icon>
-                <p matLine [@openClose]="isOpen ? 'open' : 'closed'">Drafts</p>
+                <div [@openClose]="isOpen ? 'open' : 'closed'">
+                    <p class="mat-list-text" matLine>Drafts</p>
+                </div>
             </a>
 
             <mat-divider></mat-divider>
 
             <a mat-list-item (click)="toggleActive($event)">
                 <mat-icon mat-list-icon>mail</mat-icon>
-                <p matLine [@openClose]="isOpen ? 'open' : 'closed'">All Mail</p>
+                <div [@openClose]="isOpen ? 'open' : 'closed'">
+                    <p class="mat-list-text" matLine>All Mail</p>
+                </div>
             </a>
             <a mat-list-item (click)="toggleActive($event)">
                 <mat-icon mat-list-icon>delete</mat-icon>
-                <p matLine [@openClose]="isOpen ? 'open' : 'closed'">Trash</p>
+                <div [@openClose]="isOpen ? 'open' : 'closed'">
+                    <p class="mat-list-text" matLine>Trash</p>
+                </div>
             </a>
             <a mat-list-item (click)="toggleActive($event)">
                 <mat-icon mat-list-icon>warning</mat-icon>
-                <p matLine [@openClose]="isOpen ? 'open' : 'closed'">Spam</p>
+                <div [@openClose]="isOpen ? 'open' : 'closed'">
+                    <p class="mat-list-text" matLine>Spam</p>
+                </div>
             </a>
         </mat-nav-list>
     </mat-sidenav>

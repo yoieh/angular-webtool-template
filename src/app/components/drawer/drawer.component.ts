@@ -47,9 +47,12 @@ export class DrawerComponent implements OnInit {
 
   toggleActive(event: any, url: string) {
     event.preventDefault();
+    this.isOpen && this.toggle(false);
+
     if (this.element !== undefined) {
       this.element.style.backgroundColor = "white";
     }
+
     var target = event.currentTarget;
     target.style.backgroundColor = "#e51282";
     this.element = target;
