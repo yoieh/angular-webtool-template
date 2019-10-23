@@ -8,6 +8,11 @@ import { HeaderBarModule } from 'src/app/components/header-bar/header-bar.module
 import { DrawerModule } from 'src/app/components/drawer/drawer.module';
 import { ErrandsComponent } from './errands/errands.component';
 
+import { FlexLayoutModule } from '@angular/flex-layout';
+import { MatTableModule } from '@angular/material/table';
+import { MatSortModule } from '@angular/material/sort';
+import { MatPaginatorModule } from '@angular/material/paginator';
+import {MatInputModule} from '@angular/material/input';
 
 @NgModule({
   declarations: [
@@ -20,6 +25,11 @@ import { ErrandsComponent } from './errands/errands.component';
     DashboardModule,
     HeaderBarModule,
     DrawerModule,
+    FlexLayoutModule,
+    MatTableModule,
+    MatSortModule,
+    MatPaginatorModule,
+    MatInputModule
   ]
 })
 export class AdminModule { }
