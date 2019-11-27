@@ -45,7 +45,7 @@ export class DrawerComponent implements OnInit {
     this.isOpen = !this.isOpen;
   }
 
-  toggleActive(event: any, url: string) {
+  toggleActive(event: any) {
     event.preventDefault();
     this.isOpen && this.toggle();
 
