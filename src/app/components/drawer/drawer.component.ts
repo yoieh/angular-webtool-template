@@ -41,13 +41,13 @@ export class DrawerComponent implements OnInit {
   ngOnInit() {
   }
 
-  toggle(val: boolean | undefined) {
-    typeof val !== "undefined" ? this.isOpen = val : this.isOpen = !this.isOpen;
+  toggle() {
+    this.isOpen = !this.isOpen;
   }
 
   toggleActive(event: any, url: string) {
     event.preventDefault();
-    this.isOpen && this.toggle(false);
+    this.isOpen && this.toggle();
 
     if (this.element !== undefined) {
       this.element.style.backgroundColor = "white";
